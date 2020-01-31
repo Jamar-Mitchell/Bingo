@@ -29,10 +29,18 @@ public class Cards {
 
         // Table pop
         card.append("<table>");
+
+        card.append("<tr>");
+        String[] bingo = { "B", "I", "N", "G", "O" };
+        for (int i = 0; i < 5; i++) {
+            card.append("<th > <h1>" + bingo[i] + "</h1></th>");
+        }
+        card.append("</tr>");
+
         for (int i = 1; i <= 5; i++) {
             card.append("<tr>");
             for (int j = 1; j <= 5; j++) {
-                card.append("<th>");
+                card.append("<td>");
                 for (;;) {
                     x = (int) (Math.random() * Bingo.numberRange) + 1;
                     if (contain(a, x) == false)
@@ -44,7 +52,7 @@ public class Cards {
                 } else {
                     card.append(x);
                 }
-                card.append("</th>");
+                card.append("</td>");
             }
             card.append("</tr>");
             card.append("\n\n");

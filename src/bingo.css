@@ -1,11 +1,14 @@
-html {
-  font-family: "Roboto";
+:root {
+  --card-color: slateblue;
 }
+html,
 body {
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  margin: -86px 0px 0px -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto";
+  background-color: cornflowerblue;
 }
 
 h1 {
@@ -17,19 +20,30 @@ h2 {
 }
 
 table {
-  background-color: rgb(209, 74, 74);
-  border: 2px solid black;
-  padding: 5px;
+  background-color: var(--card-color);
+  border-collapse: separate;
+  padding: 25px;
+  border-radius: 5%;
+  box-shadow: 0 16px 12px 0 rgba(0, 0, 0, 0.2),
+    0 24px 80px 0 rgba(0, 0, 0, 0.19);
 }
 
-th {
-  background-color: white;
-  border: 2px solid black;
+table tr td {
+  background-color: rgb(241, 238, 207);
   padding: 20px;
+
+  border-radius: 5px;
+}
+table tr {
+  border-radius: 20px;
+}
+table th {
+  padding: 5px;
+  color: white;
 }
 
 .highlight {
-  background-color: red;
+  background-color: rgb(243, 59, 59);
 }
 
 name {
