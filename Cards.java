@@ -23,7 +23,7 @@ public class Cards {
 
         card.append("<!DOCTYPE html> <html>");
         card.append("<head> " + converter.cssToString() + converter.jsToString() + "</head>");
-        card.append("<body><h1>Capco Bingo</h1>\n ");
+        card.append("<body><logo></logo>\n ");
         int a[] = new int[25];
         int y = 0, x = 0;
 

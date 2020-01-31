@@ -46,6 +46,17 @@ table th {
   background-color: rgb(243, 59, 59);
 }
 
+logo {
+  height: 150px;
+  width: 300px;
+  background-repeat: no-repeat;
+  filter: invert();
+}
+
 name {
   text-align: center;
+}
+
+h3 {
+  color: white;
 }
