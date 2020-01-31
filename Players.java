@@ -4,10 +4,6 @@ import java.util.*;
 //import javax.mail.internet.*;
 import javax.activation.*;
 
-/************************************
- * This is a random bingo game card creator. Try it and if you like it then like
- * my code.......
- ************************************/
 public class Players {
 
     private ArrayList<Person> playerList;

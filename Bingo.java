@@ -5,8 +5,10 @@ import java.util.*;
 import javax.activation.*;
 
 /************************************
- * This is a random bingo game card creator. Try it and if you like it then like
- * my code.......
+ * Simpy write down the names of the people bingo cards need to be generated for
+ * in the namesList.txt file, then run this file. All the bingo cards will be
+ * generated in the "cards" folder. You may change the settings below to modify
+ * it to your preference Enjoy! -Sincerley Jamar :)
  ************************************/
 public class Bingo {
     public static Cards cards;
