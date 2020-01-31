@@ -16,6 +16,7 @@ public class Bingo {
     public static String CSSLocation = "./src/bingo.css";
     public static String JSLocation = "./src/bingo.js";
     public static String host = "localhost";
+    public static int numberRange = 75;
     // Get system properties
     public static Properties properties = System.getProperties();
 

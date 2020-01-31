@@ -38,7 +38,7 @@ public class Cards {
             for (int j = 1; j <= 5; j++) {
                 card.append("<th>");
                 for (;;) {
-                    x = (int) (Math.random() * 75) + 1;
+                    x = (int) (Math.random() * Bingo.numberRange) + 1;
                     if (contain(a, x) == false)
                         break;
                 }
