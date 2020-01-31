@@ -13,6 +13,8 @@ public class Bingo {
     public static Players players;
     public static String fromEmail = "insertEmailHere@gmail.com";
     public static String nameListLocation = "./nameList.txt";
+    public static String CSSLocation = "./src/bingo.css";
+    public static String JSLocation = "./src/bingo.js";
     public static String host = "localhost";
     // Get system properties
     public static Properties properties = System.getProperties();
@@ -21,7 +23,7 @@ public class Bingo {
     public static void main(String[] args) {
 
         cards = new Cards();
-        players = new Players(nameListLocation, cards);
+        players = new Players(cards);
 
         cards.populateNCards(cards.getNumCards(), players.getPlayers());
         // sendEmail("jamar", "jamar.mitchell@capco.com", "attachment");

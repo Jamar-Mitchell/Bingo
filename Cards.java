@@ -22,7 +22,7 @@ public class Cards {
 
     public String populateCard(String name) {
 
-        Converter converter = new Converter("./bingo.css", "./bingo.js");
+        Converter converter = new Converter(Bingo.CSSLocation, Bingo.JSLocation);
         StringBuilder card = new StringBuilder();
 
         card.append("<!DOCTYPE html> <html>");

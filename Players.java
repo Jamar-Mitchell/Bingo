@@ -11,11 +11,9 @@ import javax.activation.*;
 public class Players {
 
     private ArrayList<Person> playerList;
-    private String nameLocation;
 
-    public Players(String nameLocation, Cards cards) {
+    public Players(Cards cards) {
         this.playerList = new ArrayList<Person>();
-        this.nameLocation = nameLocation;
         populatePlayers(cards);
     }
 
@@ -33,7 +31,7 @@ public class Players {
 
     public ArrayList<Person> populatePlayers(Cards cards) {
 
-        File file = new File(nameLocation);
+        File file = new File(Bingo.nameListLocation);
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
