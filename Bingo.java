@@ -26,8 +26,8 @@ public class Bingo {
         cards = new Cards();
         players = new Players(cards);
 
-        // cards.populateNCards(cards.getNumCards(), players.getPlayers());
-        bingoNumberGenerator(numberRange, 50);
+        cards.populateNCards(cards.getNumCards(), players.getPlayers());
+        bingoNumberGenerator(numberRange, 30);
         // sendEmail("jamar", "jamar.mitchell@capco.com", "attachment");
     }
 
