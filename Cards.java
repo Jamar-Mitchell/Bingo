@@ -28,7 +28,7 @@ public class Cards {
         int y = 0, x = 0;
 
         // Table pop
-        card.append("<table>");
+        card.append("<table id=\"table\">");
 
         card.append("<tr>");
         String[] bingo = { "B", "I", "N", "G", "O" };
@@ -37,12 +37,46 @@ public class Cards {
         }
         card.append("</tr>");
 
-        for (int i = 1; i <= 5; i++) {
+        for (int row = 1; row <= 5; row++) {
             card.append("<tr>");
-            for (int j = 1; j <= 5; j++) {
+            for (int col = 1; col <= 5; col++) {
+
+                if (row == 3 && col == 3) {
+                    card.append("<td class=\" free\">");
+                    // freeSpot
+
+                    card.append("CAPCO</td>");
+                    continue;
+                }
                 card.append("<td>");
                 for (;;) {
-                    x = (int) (Math.random() * Bingo.numberRange) + 1;
+
+                    switch (col) {
+
+                    case 1:
+                        // B
+                        x = (int) (Math.random() * 15) + 1;
+                        break;
+                    case 2:
+                        // I
+                        x = (int) (Math.random() * 15) + 16;
+                        break;
+                    case 3:
+                        // I
+                        x = (int) (Math.random() * 15) + 31;
+                        break;
+                    case 4:
+
+                        // G
+                        x = (int) (Math.random() * 15) + 46;
+                        break;
+                    case 5:
+                        // O
+                        x = (int) (Math.random() * 15) + 61;
+                        break;
+
+                    }
+                    // x = (int) (Math.random() * Bingo.numberRange) + 1;
                     if (contain(a, x) == false)
                         break;
                 }
@@ -57,7 +91,7 @@ public class Cards {
             card.append("</tr>");
             card.append("\n\n");
         }
-        card.append("</table> <h3> CardHolder: " + name + "<h3> </body> </html>");
+        card.append("</table> <h3 id=\"cardHolder\"> CardHolder: " + name + "<h3> </body> </html>");
 
         return card.toString();
     }
@@ -72,7 +106,7 @@ public class Cards {
                 file.createNewFile();
                 PrintWriter out = new PrintWriter("./cards/" + cardFile);
                 out.print(populateCard(name));
-                file.setReadOnly();
+                // file.setReadOnly();
                 System.out.println(cardFile);
                 out.close();
             }

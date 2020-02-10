@@ -31,7 +31,12 @@ table {
 table tr td {
   background-color: rgb(241, 238, 207);
   padding: 20px;
+  border-radius: 5px;
+}
 
+table tr td free {
+  background-color: rgb(241, 238, 207);
+  width: 15px;
   border-radius: 5px;
 }
 table tr {
@@ -44,10 +49,17 @@ table th {
 
 .highlight {
   background-color: rgb(243, 59, 59);
+  color: white;
 }
-
+.free {
+  padding: 0;
+  text-align: center;
+  color: white;
+  background-color: rgb(243, 59, 59);
+}
 logo {
   height: 150px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/76/Capco_wiki_logo.png);
   width: 300px;
   background-repeat: no-repeat;
   filter: invert();
