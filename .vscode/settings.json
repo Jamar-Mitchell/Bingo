@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files\\Java\\jdk1.8.0_231\\javamail-1.4.5\\mail.jar"
+    ]
+}

@@ -1,8 +1,4 @@
 import java.io.*;
-import java.util.*;
-////import javax.mail.*; //must download the javamail api
-//import javax.mail.internet.*;
-import javax.activation.*;
 
 public class Converter {
 
@@ -63,7 +59,6 @@ public class Converter {
 
         js.append("</script>");
 
-        System.out.println(js);
         return js.toString();
     }
 }

@@ -1,8 +1,5 @@
 import java.io.*;
 import java.util.*;
-////import javax.mail.*; //must download the javamail api
-//import javax.mail.internet.*;
-import javax.activation.*;
 
 public class Players {
 
@@ -32,10 +29,31 @@ public class Players {
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
 
-            String name;
-            while ((name = br.readLine()) != null) {
+            String line;
 
-                Person person = new Person(name);
+            String[] details;
+            String name;
+            String email;
+            int numCards;
+            Person person = new Person("error", 1);
+
+            while ((line = br.readLine()) != null) {
+
+                details = line.split(" ");
+                if (details.length > 4 || details.length < 3)
+                    throw new Exception("too few or too many arguments in nameList.txt.");
+                else if (details.length == 3) {
+                    name = details[0] + " " + details[1];
+                    numCards = Integer.parseInt(details[2]);
+                    person = new Person(name, numCards);
+                }
+
+                else if (details.length == 4) {
+                    name = details[0] + " " + details[1];
+                    email = details[2];
+                    numCards = Integer.parseInt(details[3]);
+                    person = new Person(name, numCards, email);
+                }
                 addPlayer(person);
 
             }

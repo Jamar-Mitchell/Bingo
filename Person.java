@@ -1,30 +1,29 @@
-import java.io.*;
 import java.util.*;
-////import javax.mail.*; //must download the javamail api
-//import javax.mail.internet.*;
-import javax.activation.*;
 
 public class Person {
 
     private String name;
     private String email;
     private TreeSet<Integer> numbers;
+    private int numCards;
 
-    public Person(String name) {
+    public Person(String name, int numCards) {
         this.name = name;
+        this.numCards = numCards;
     }
 
-    public Person(String name, String email) {
+    public Person(String name, int numCards, String email) {
         this.name = name;
         this.email = email;
+        this.numCards = numCards;
     }
 
-    public void addNumber(int number) {
-        this.numbers.add(number);
+    public void setNumCards(int numCards) {
+        this.numCards = numCards;
     }
 
-    public TreeSet<Integer> getNumbers() {
-        return this.numbers;
+    public int getNumCards() {
+        return this.numCards;
     }
 
     public void setName(String name) {
@@ -41,5 +40,13 @@ public class Person {
 
     public String getEmail() {
         return this.email;
+    }
+
+    public void addBingoNumber(int number) {
+        this.numbers.add(number);
+    }
+
+    public TreeSet<Integer> getBingoNumbers() {
+        return this.numbers;
     }
 }

@@ -1,8 +1,5 @@
 import java.io.*;
 import java.util.*;
-////import javax.mail.*; //must download the javamail api
-//import javax.mail.internet.*;
-import javax.activation.*;
 
 public class Cards {
 
@@ -22,7 +19,8 @@ public class Cards {
         StringBuilder card = new StringBuilder();
 
         card.append("<!DOCTYPE html> <html>");
-        card.append("<head> " + converter.cssToString() + converter.jsToString() + "</head>");
+        card.append("<head> " + "<meta http-equiv=\"x-ua-compatible\" content=\"IE=edge\">" + converter.cssToString()
+                + converter.jsToString() + "</head>");
         card.append("<body><logo></logo>\n ");
         int a[] = new int[25];
         int y = 0, x = 0;
@@ -99,20 +97,25 @@ public class Cards {
     public void populateNCards(int numCards, ArrayList<Person> playerList) {
         for (int i = 0; i < numCards; i++) {
             String name = playerList.get(i).getName();
-            String cardFile = name + "_card.html";
-            File file = new File("./cards/" + cardFile);
+            int numPlayerCards = playerList.get(i).getNumCards();
 
-            try {
-                file.createNewFile();
-                PrintWriter out = new PrintWriter("./cards/" + cardFile);
-                out.print(populateCard(name));
-                // file.setReadOnly();
-                System.out.println(cardFile);
-                out.close();
-            }
+            for (int j = 1; j <= numPlayerCards; j++) {
+                String cardFile = name + " card" + j + ".html";
+                File file = new File("./cards/" + cardFile);
 
-            catch (Exception e) {
-                System.out.println(e);
+                try {
+                    file.createNewFile();
+                    PrintWriter out = new PrintWriter("./cards/" + cardFile);
+                    out.print(populateCard(name));
+                    file.setReadOnly();
+                    System.out.println(cardFile);
+                    out.close();
+                }
+
+                catch (Exception e) {
+                    System.out.println(e);
+                }
+
             }
 
         }

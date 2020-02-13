@@ -19,6 +19,7 @@ public class Bingo {
     public static String JSLocation = "./src/bingo.js";
     public static String host = "localhost";
     public static int numberRange = 25;
+    public static int numPlayingNumbers = 75;
 
     // Setup mail server
     public static void main(String[] args) {
@@ -27,15 +28,14 @@ public class Bingo {
         players = new Players(cards);
 
         cards.populateNCards(cards.getNumCards(), players.getPlayers());
-        bingoNumberGenerator(numberRange, 30);
-        // sendEmail("jamar", "jamar.mitchell@capco.com", "attachment");
+        // bingoNumberGenerator(numberRange, numPlayingNumbers);
+        // sendEmail("jamar", "toEmail@gmail.com", "attachment");
     }
 
     public static void bingoNumberGenerator(int range, int amount) {
         String[] letterArray = { "B", "I", "N", "G", "O" };
         HashSet<String> set = new HashSet<String>();
         StringBuilder sb;
-        File file = new File("./bingoNumbers.txt");
 
         System.out.println("____________________________\nBelow are the game numbers\n____________________________");
         for (int i = 0; i < amount; i++) {

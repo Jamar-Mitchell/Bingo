@@ -1,5 +1,8 @@
 :root {
   --card-color: slateblue;
+  --card-background: cornflowerblue;
+  --capco-card: #414141;
+  --capco-background: #313131;
 }
 html,
 body {
@@ -8,7 +11,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Roboto";
-  background-color: cornflowerblue;
+  background-color: var(--capco-background);
 }
 
 h1 {
@@ -20,7 +23,7 @@ h2 {
 }
 
 table {
-  background-color: var(--card-color);
+  background-color: var(--capco-card);
   border-collapse: separate;
   padding: 25px;
   border-radius: 5%;
@@ -32,6 +35,7 @@ table tr td {
   background-color: rgb(241, 238, 207);
   padding: 20px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 table tr td free {
