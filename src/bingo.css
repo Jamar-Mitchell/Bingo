@@ -22,6 +22,13 @@ h2 {
   text-align: right;
 }
 
+h3,
+h4 {
+  color: white;
+  padding-bottom: 0;
+  margin-top: auto;
+}
+
 table {
   background-color: var(--capco-card);
   border-collapse: separate;
@@ -33,7 +40,7 @@ table {
 
 table tr td {
   background-color: rgb(241, 238, 207);
-  padding: 20px;
+  padding: 17px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -51,6 +58,19 @@ table th {
   color: white;
 }
 
+cards {
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+card {
+  margin: auto;
+  padding: 10px;
+}
 .highlight {
   background-color: rgb(243, 59, 59);
   color: white;
@@ -60,6 +80,7 @@ table th {
   text-align: center;
   color: white;
   background-color: rgb(243, 59, 59);
+  font-size: 0.9rem;
 }
 logo {
   height: 150px;
@@ -73,6 +94,12 @@ name {
   text-align: center;
 }
 
-h3 {
-  color: white;
+#numcard {
+  display: none;
+}
+
+#numround {
+  padding: 0;
+  padding-top: 0;
+  margin-top: -10px;
 }

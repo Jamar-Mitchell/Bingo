@@ -20,6 +20,7 @@ public class Bingo {
     public static String host = "localhost";
     public static int numberRange = 25;
     public static int numPlayingNumbers = 75;
+    public static int roundNumber = 3;
 
     // Setup mail server
     public static void main(String[] args) {
@@ -27,7 +28,7 @@ public class Bingo {
         cards = new Cards();
         players = new Players(cards);
 
-        cards.populateNCards(cards.getNumCards(), players.getPlayers());
+        cards.populateNCardsV2(cards.getNumCards(), players.getPlayers());
         // bingoNumberGenerator(numberRange, numPlayingNumbers);
         // sendEmail("jamar", "toEmail@gmail.com", "attachment");
     }
@@ -51,27 +52,27 @@ public class Bingo {
 
                 switch (letter) {
 
-                case "B":
-                    // B
-                    number = (int) (Math.random() * 15) + 1;
-                    break;
-                case "I":
-                    // I
-                    number = (int) (Math.random() * 15) + 16;
-                    break;
-                case "N":
-                    // I
-                    number = (int) (Math.random() * 15) + 31;
-                    break;
-                case "G":
+                    case "B":
+                        // B
+                        number = (int) (Math.random() * 15) + 1;
+                        break;
+                    case "I":
+                        // I
+                        number = (int) (Math.random() * 15) + 16;
+                        break;
+                    case "N":
+                        // I
+                        number = (int) (Math.random() * 15) + 31;
+                        break;
+                    case "G":
 
-                    // G
-                    number = (int) (Math.random() * 15) + 46;
-                    break;
-                case "O":
-                    // O
-                    number = (int) (Math.random() * 15) + 61;
-                    break;
+                        // G
+                        number = (int) (Math.random() * 15) + 46;
+                        break;
+                    case "O":
+                        // O
+                        number = (int) (Math.random() * 15) + 61;
+                        break;
 
                 }
 
